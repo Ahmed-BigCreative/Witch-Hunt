@@ -1,102 +1,130 @@
-def start_game():
-    print("Welcome to The Witch's Pursuit!")
-    print("The year is 1692, and the village of Eldridge is gripped by fear and paranoia.")
-    print("Rumors of witchcraft have spread, and it's your task to investigate.")
-    print("Are you ready to begin?")
+﻿print(R""" 
+         __________________ _______                               _       _________
+|\     /|\__   __/\__   __/(  ____ \|\     /|  |\     /||\     /|( (    /|\__   __/
+| )   ( |   ) (      ) (   | (    \/| )   ( |  | )   ( || )   ( ||  \  ( |   ) (   
+| | _ | |   | |      | |   | |      | (___) |  | (___) || |   | ||   \ | |   | |   
+| |( )| |   | |      | |   | |      |  ___  |  |  ___  || |   | || (\ \) |   | |   
+| || || |   | |      | |   | |      | (   ) |  | (   ) || |   | || | \   |   | |   
+| () () |___) (___   | |   | (____/\| )   ( |  | )   ( || (___) || )  \  |   | |   
+(_______)\_______/   )_(   (_______/|/     \|  |/     \|(_______)|/    )_)   )_(   
+""")
 
-    choice = input("Type 'yes' to accept the task or 'no' to refuse: ").strip().lower()
+from time import sleep
 
-    if choice == 'yes':
-        chapter_one()
-    elif choice == 'no':
-        print("You decided not to get involved. The village continues to suffer from fear and suspicion.")
-    else:
-        print("Please choose a valid option.")
-        start_game()
+import sys,time
+from tkinter import N
 
-def chapter_one():
-    print("\nYou are summoned by Magistrate Thornton to investigate the witchcraft accusations.")
-    print("The magistrate provides you with a list of names and sends you out into the village.")
-    print("Your first stop is the village inn.")
+def sprint(str):
+   for c in str + '\n':
+     sys.stdout.write(c)
+     sys.stdout.flush()
+     time.sleep(4./90)
 
-    choice = input("Do you want to (1) Interview the innkeeper, (2) Seek out the traveling merchant, or (3) Investigate the inn? ").strip()
+sprint("You awaken...")
+sleep(1)
+sprint('"Where am I?" you look around you, but you stop arubtply when something catches your eyes')
+sprint("\n")
+sprint("A being of light draped in holy white clothes emerges before you")
+sleep(1)
+print(R""" 
+   -=-
+(\  _  /)
+( \( )/ )
+(       )
+ `>   <'
+ /     \  
+ `-._.-'
 
-    if choice == '1':
-        interview_innkeeper()
-    elif choice == '2':
-        seek_merchant()
-    elif choice == '3':
-        investigate_inn()
-    else:
-        print("Please choose a valid option.")
-        chapter_one()
+ """)
+sleep(2)
+sprint("You watch in awe as she glides into the air, floating towards a runelike contstruct.")
+sleep(2)
+sprint('"Wh- Who are you?" you ask, confused with the situation')
+print("\n")
+sprint('"Me?" she says, "My name is Helia Young one, I have been tasked with leading you onto the right path for this new adventure of yours."\n')
+PlayerName = input('"What is your name Player"\n')
+print(PlayerName)
+print("\n")
+print('"',PlayerName,'huh, how peculiar"')
+print("\n")
+sprint('"You share the same name as him, but can you live up to his will? "')
+sprint('"We shall witness your fate.."')
+print("\n")
 
-def interview_innkeeper():
-    print("\nThe innkeeper, Martha, tells you about a peculiar visitor who stayed last week.")
-    print("She mentions that the visitor paid with strange coins and was in a hurry.")
+sprint("Suddenly she stops, as she lands onto the shrine, the only construct in the vast white space above the clouds, you can finally see it in its true beauty")
+print("\n")
+sprint("It appeared to be old, however its age did not cease its modernised look.")
+sprint("The bricks looked strong, impregnable even, and radiated with a holy aura that threatened to erase any tresspassers.")
+print("\n")
+sprint("Somehow or someway, it seemed sentient, capable of discerning who was free to use its raw power or not.")
+sleep(1)
+sprint("Slowly its doors opened up to allow the dainty looking angel in")
+sleep(1)
+print("\n")
+print(R"""
+              )\          _._._._  _._._._           /(
+                \`--.___,'=================`.___,--'/
+                 \`--._.__                 __._,--'/
+                   \  ,. l`~~~~~~~~~~~~~~~'l ,.  /
+       __            \||(_)!_!_!_.-._!_!_!(_)||/            __
+       \\`-.__        ||_|____!!_|;|_!!____|_||        __,-'//
+        \\    `==---='-----------'='-----------`=---=='    //
+        | `--.                                         ,--' |
+         \  ,.`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',.  /
+           \||  ____,-------._,-------._,-------.____  ||/
+            ||\|___!`======="!`======="!`======="!___|/||
+            || |---||--------||-| | |-!!--------||---| ||
+  __O_____O_ll_lO_____O_____O|| |'|'| ||O_____O_____Ol_ll_O_____O__
+  o H o o H o o H o o H o o |-----------| o o H o o H o o H o o H o
+ ___H_____H_____H_____H____O =========== O____H_____H_____H_____H___
+                          /|=============|\
+()______()______()______() '==== +-+ ====' ()______()______()______()
+||{_}{_}||{_}{_}||{_}{_}/| ===== |_| ===== |\{_}{_}||{_}{_}||{_}{_}||
+||      ||      ||     / |==== s(   )s ====| \     ||      ||      ||
+======================()  =================  ()======================
+----------------------/| ------------------- |\----------------------
+                     / |---------------------| \
+-'--'--'           ()  '---------------------'  ()
+                   /| ------------------------- |\    --'--'--'
+       --'--'     / |---------------------------| \    '--'
+                ()  |___________________________|  ()           '--'-
+  --'-          /| _______________________________  |\
+ --'           / |__________________________________| \
+""")
 
-    choice = input("Do you want to (1) Ask Martha more about the visitor, (2) Examine the strange coins, or (3) Leave and visit the merchant? ").strip()
-
-    if choice == '1':
-        print("Martha describes the visitor as a woman who seemed agitated and had a mysterious aura.")
-        print("This could be a significant lead.")
-        chapter_two()
-    elif choice == '2':
-        print("Martha no longer has the coins, but you note that this could be a clue for later.")
-        chapter_two()
-    elif choice == '3':
-        seek_merchant()
-    else:
-        print("Please choose a valid option.")
-        interview_innkeeper()
-
-def seek_merchant():
-    print("\nThe traveling merchant seems nervous when you approach.")
-    print("He mentions a peculiar woman who paid with strange coins and left hastily.")
-
-    choice = input("Do you want to (1) Ask the merchant more about the woman, (2) Examine the coins, or (3) Investigate further on your own? ").strip()
-
-    if choice == '1':
-        print("The merchant provides you with a description of the woman, which matches Martha's account.")
-        print("You now have more information about the mysterious visitor.")
-        chapter_two()
-    elif choice == '2':
-        print("The merchant does not have the coins anymore, but you note this detail.")
-        chapter_two()
-    elif choice == '3':
-        print("You decide to explore other leads on your own.")
-        chapter_two()
-    else:
-        print("Please choose a valid option.")
-        seek_merchant()
-
-def investigate_inn():
-    print("\nYou search the inn for any evidence but find nothing unusual.")
-    print("However, you decide to return to the merchant for more information.")
-
-    seek_merchant()
-
-def chapter_two():
-    print("\nWith your new information, you need to decide your next course of action.")
-    print("You have a description of the peculiar woman and know about the strange coins.")
-
-    choice = input("Do you want to (1) Investigate the woman's whereabouts, (2) Look into the strange coins, or (3) Talk to other villagers? ").strip()
-
-    if choice == '1':
-        print("You investigate and find that the woman was seen in the forest, which leads to more clues.")
-        print("You are getting closer to uncovering the truth.")
-    elif choice == '2':
-        print("You follow up on the coins and find that they are from a foreign land, possibly linked to dark magic.")
-        print("This might be important for your investigation.")
-    elif choice == '3':
-        print("You talk to other villagers and gather more information about the witchcraft rumors.")
-        print("Each conversation adds pieces to the puzzle.")
-    else:
-        print("Please choose a valid option.")
-        chapter_two()
-
-def main():
-    start_game()
-
-if __name__ == "__main__":
-    main()`
+sleep(1)
+sprint('"By using the power of this holy shrine, the heavens allow to to grant you high rank abilities to aid you in your journey"') 
+sleep(1)
+sprint('"Which class intrests you the most young one"')
+print("\n")
+print("""
+There are many classes, but these are the base ones:
+Warrior
+Archer
+Mage
+Alchemist
+Rogue
+Tamer
+Dancer
+Dragoon
+""")
+print("\n")
+sprint('"These are all the base starting classes, after your class evolution you would be able to choose to evolve into a better version of your class for example:"')
+sprint('"A Warrior would be able to become a berserker. Other than that, Summoner, Lich, Ranger, Assassain, Necromancer, Jester, Enchanter, Dark Mage and Wizard are all just some of your Class opportunities"')
+print("\n")
+PlayerChosenClass = input('"Which path will you choose"\n')
+sleep(1)
+print('"',PlayerChosenClass,'...? Very well then, I shall do as you wish"')
+sprint('"Let us get on with the ritual"')
+sleep(2)
+print("\n")
+sprint('"While we wait for the Shrine to finish processing its power, I must inform you of your mission"')
+print("\n") 
+sleep(1)
+sprint('"Lately, a dark witch has ravaged the holy kingdoms."')
+sleep(1)
+sprint('"Disgustingly, her name is Herbia. Which is unfortunately very similar to mine"')
+print("\n")
+sprint("You flinch as her attitude immediately changes at the mention of this evil witch")
+print("\n")
+sprint('"We, ACTUAL holy ones cannot intervene, so we have called you over in order to vanquish her"')
