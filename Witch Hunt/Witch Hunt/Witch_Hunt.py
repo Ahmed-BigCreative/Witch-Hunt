@@ -9,6 +9,7 @@
 (_______)\_______/   )_(   (_______/|/     \|  |/     \|(_______)|/    )_)   )_(   
 """)
 
+from ctypes.wintypes import ULONG
 from time import sleep
 
 import sys,time
@@ -112,7 +113,7 @@ print("\n")
 sprint('"These are all the base starting classes, after your class evolution you would be able to choose to evolve into a better version of your class for example:"')
 sprint('"A Warrior would be able to become a berserker. Other than that, Summoner, Lich, Ranger, Assassain, Necromancer, Jester, Enchanter, Dark Mage and Wizard are all just some of your Class opportunities"')
 print("\n")
-PlayerChosenClass = input('"Which path will you choose"\n')
+PlayerChosenClass = input('"Which path will you choose"\n') # useless inout since shrine will fail anyways
 sleep(1)
 print('"',PlayerChosenClass,'...? Very well then, I shall do as you wish"')
 sprint('"Let us get on with the ritual"')
@@ -128,20 +129,143 @@ print("\n")
 sprint("You flinch as her attitude immediately changes at the mention of this evil witch")
 print("\n")
 sleep(1)
-sprint('"We, the ACTUAL holy ones cannot intervene, so we have called you over in order to vanquish her"')     
-sprint("It seems this matter is of great importance to Miss Helia you think to yourself\n")
+sprint('"We, the ACTUAL holy ones cannot intervene, so we have called for you in order to vanquish her"')     
+sprint("'It seems this matter is of great importance to Miss Helia you think to yourself'\n")
 
-sprint('"Is Herbia really that bad?...I mean, I still havent really heard of what she has done"')
+IsHerbiaReallyThatBad = input(""" 
+What would you like to responde with
+1 for "Do i really have to??...I mean, I dont know what she has done and this isnt even my own world"
+2 for "What has she done to recieve that treatment"
+3 for "I understand"
+                             \n""") #makes your choice of pathway 1 or 2
+if IsHerbiaReallyThatBad == '1': # ur dead (become stuffed doll)
+    sprint('"You dare disrespect the heavens wishes like this?"')
+    sleep(1)
+    sprint('"Foolish mortal, I shall erase you before you decide to taint the air with your blasphemous prescence"')
+    print("\n")
+    print("You feel her powering up")
+    sleep(1)
+    sprint('"No wait, I didnt mean to disrespect you like that" you plead,')
+    sleep(1)
+    print("but it is already too late")
+    print("\n")
+    sleep(2)
+    sprint("You wake up.. but you are stiff")
+    sleep(1)
+    sprint("You are stuck, and paralysed.... as a doll made out of a living human soul")
+    sleep(1)
+    sprint("You shall live for the rest of existence as so,... ")
+    sleep(1)
+    sprint("and not even the udnerworld can save you")
+    print("\n")
+    print("\n")
+    sleep(2)
+    print("You have made the wrong choice.")
+    sleep(2)
+    sprint("Before you embark on your long journey of silence, degradation, silence, boredom, silence, paralysation and silence you lament yourself")
+    sleep(1)
+    sprint('"Ah, I wish I had made the right decisions"')
+    sleep(2)
+    print("\n")
+    print("You are a failure.")
+    sleep(1)
+    sprint("An entity that can literally one tap  you expressed her hate on her opps however you still decide to question her")
+    sleep(1)
+    sprint("you are a being of ignorance, one that needed to be removed in order for this world to progress")
+    sleep(3)
+    print("\n")
+    print("\n")
+    print("\n")
+    sprint("Intelligence is chasing you... however you have always been faster")
+    sleep(2)
+    sprint("better luck next time,.. dumbass")
+    exit()
+elif IsHerbiaReallyThatBad == '2': # pathway 1
+    sprint("The angel glares at you")
+    IsHerbiaReallyThatBadContinuation = input ("""
+    1 for "Sorry if i offended you, I am just curious Miss"
+    2 for "So,.. are you going to answer"
+    \n""")
+    if IsHerbiaReallyThatBadContinuation == '1':
+        sleep(1)
+        sprint('"It is fine" the angel remarks')
+        sleep(1)
+        sprint('"She spreads chaos and terror across the realm"')
+        sleep(1)
+        print("\n")
+        sprint('"And worst of all, she dares to rival us higher beings,"')
+        sleep(1)
+        sprint("'That sounds kind of petty', you think to yourself")
+        sleep(1)
+        sprint('"That you for informing me" you reply')
+if IsHerbiaReallyThatBad == '3':
+        break ()
+    elif IsHerbiaReallyThatBadContinuation == '2': # u die
+        sleep(1)
+        sprint('"How arrogant"')
+        sleep(1)
+        sprint('"A mere human, with not even an ounce of power in his hands"')
+        sleep(1)
+        sprint('"DARES TO RESPOND IN SUCH ARROGANCE TO ME?"')
+        sleep(1)
+        sprint('"A being of such an opulence of stupidity will not make it far regardless....Natural selection would have taken you down anyways"')
+        sleep(1)
+        sprint('"Your stupidity has lead to this"')
+        sleep(3)
+        print("\n")
+        print("\n")
+        print("You have made the wrong choice.")
+        sleep(2)
+        print("\n")
+        print("You are a failure.")
+        sleep(1)
+        sprint("You would respond to an angel with such arrogance and remarks?, It seems some of us have yet to evolve. ")
+        sleep(1)
+        sprint("Stupidity has taken ahold of you. If you had been taught some manners maybe you would have survived today.")
+        sleep(3)
+        print("\n")
+        print("\n")
+        print("\n")
+        sprint("Intelligence is chasing you... however you have always been faster")
+        sleep(2)
+        sprint("better luck next time,... rude ahh")
+        exit()
+sleep(3)
+print("\n")
+print("\n")
+sprint("The conversation ceases, howevery ou start to thing")
+sleep(1)
+sprint("As you do, you feel a certain aura enveloping your surroudings")
+sleep(1)
+sprint("It seemed as if someone was there...however, there was no one")
+sleep(1)
+sprint('"Young one...Not everything is as it seems"')
+sleep(1)
+sprint('"Who are you"you whisper back in fear as wicked energy surrounds you')
+sprint('"And where is miss Helia"')
+sleep(1)
+print("\n")
+sprint('"We are seperated for a while. Player, she is tricking you, do not fall for her manipulative poisonous words coated in honey.."the unknown voice says')
+WouldYouLikeToFollowMeInstead = input ("""
+1 for "Yes"
+2 for "Who are you"
+3 for "No"
+""")
+
+if WouldYouLikeToFollowMeInstead = '1':
+    sprint('"Good" she says')
 
 
-WillYouTakeOnThisMission = input('"Will you take on this mission Player? Yes or No "\n')
-if WillYouTakeOnThisMission == 'Yes':
+WillYouTakeOnThisMission = input('"Will you formally take on this mission Player? Yes or No "\n') #decides pathway 1 or 3
+if WillYouTakeOnThisMission == 'Yes': #you will go on pathway 1
     sprint('"I must thank you hero, there will certainly be a multitiude of rewards and benefits for you after you complete your mission,... maybe even me.."')
-elif WillYouTakeOnThisMission == 'No':
+elif WillYouTakeOnThisMission == 'No': #test your luck in pathway 3
     sleep(1)
     sprint('"Then may death grasp your soul"')
+    sleep(1)
     sprint('"Foolish Mortal....."ZWAP')
     print("fu23*&£YUR{@}{@y2")
+    sleep(1)
     print(R"""
     ⣴⠀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣷⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⢾⣷⣿⣿⣿⣿⣿⠿⠟⠛⠉⠉⠉⠉⠉⠙⠳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -174,26 +298,66 @@ elif WillYouTakeOnThisMission == 'No':
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠟⠛⠛⠿⠿⠿⠿⠿⣿⣿⣿⣿⠿⠿⠿⢿⠿⠟⠛⠛⠃
     """)
     sleep(2)
-    print("beep")
+    print("beep") # now in underworld 
     sprint("You have made the wrong choice")
     sprint("You have died..")
     sprint("You start to see, and witness a pool of darkness below you")
     sleep(1)
     sprint("Slowly, your senses return")
     sprint("And with it excruitiating pain")
+    sleep(2)
     sprint("In the midst of agony, you feel")
     sprint("However you do not feel")
-    sprint("You are a living being no longer, In the realm of the dead all being are equal")
+    sleep(1)
+    sprint("You are a living being no longer, In the realm of the dead all beings are equal")
+    sleep(1)
     sprint("Before the king of the underworld and his messenger, the reaper, suffering is beauty")
-    HowDoYouFeel = input("How do you feel\n")
+    sleep(1)
+    HowDoYouFeel = input("How do you feel\n") # useless input
+    sleep(2)
     sprint("It does not matter, your feelings are not important")
-    DoYouHarbourRegretOrVengeanceInYourHeart = input("Do you harbour regret or vengeance in your heart. Yes or No\n")
-    if DoYouHarbourRegretOrVengeanceInYourHeart == 'Yes':
+    DoYouHarbourRegretOrVengeanceInYourHeart = input("Do you harbour regret or vengeance in your heart. Yes or No\n") 
+    if DoYouHarbourRegretOrVengeanceInYourHeart == 'Yes': # MAIN SCANERIO 3 you said you have regrets when underworld ruler asked (will lead you to pathway 3)
         sleep(2)
         sprint("Through the darkness of the abyss, an even darker aura emerges")
+        sleep(1)
         sprint("Torrents of deathly mana rush through the space")
         sprint("A tear, rips through reality and finally,... a voice speaks to you")
+        sleep(1)
         sprint('"We have heard your pleas,..Player"',PlayerName)
         sprint('"Your heart has the place for desire, it glows with hatred for the being who caused unjust"')
+        sleep(1)
+        print("\n")
+        print("\n")
+        print("Pathway 'Three' unlocked")
+    elif DoYouHarbourRegretOrVengeanceInYourHeart == 'No': #you said you have no regrets when underworld ruler asked (will kill you)
+        sleep(2)
+        print("You have made the wrong choice.")
+        sleep(1)
+        sprint('"Return.."')
+        print("\n")
+        sprint("You feel yourself losing something")
+        sleep(1)
+        sprint("Something deep inside of you,... Something..profound")
+        sleep(1)
+        sprint("A trail of essense exits your consciousness")
+        sleep(1)
+        sprint("In your final moments of sentience, you come to a realisation")
+        sleep(1)
+        sprint('"Ah, I wish I had made the right decisions"')
+        sleep(2)
+        print("\n")
+        print("You are a failure.")
+        sprint("You have been given a chance after the next, however your ignorance continues to shine")
+        sleep(3)
+        print("\n")
+        print("\n")
+        print("\n")
+        sprint("Intelligence is chasing you... however you have always been faster")
+        sleep(2)
+        sprint("better luck next time, if there is one...")
+        exit()
+        #dead from pathway 3 after saying u have no regrets
+
     
 
