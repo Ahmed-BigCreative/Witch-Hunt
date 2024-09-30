@@ -253,7 +253,7 @@ sprint('"We are seperated for a while. Player, she is tricking you, do not fall 
 WouldYouLikeToFollowMeInstead = input ("""
 "Would you like to follow me instead"
 1 for "Yes"
-2 for "Who are you... and why do you wany "
+2 for "Who are you... and why do you want "
 3 for "No"
 """)
 if WouldYouLikeToFollowMeInstead == '1':
@@ -262,12 +262,32 @@ if WouldYouLikeToFollowMeInstead == '1':
     sprint("so you're one of those huh... disgusting")
     sprint('"what did i do?" you respond confused\n')
     sleep(1)
-    sprint('"Your kind')
+    sprint('"Your kind of people, switching sides with one sentence..."')
+    sprint('"I cannot take in traitors, for you will betray me in the same way you have just betrayed that filthy angel"')
+    sprint('"No variables must be left alive... good riddance"')
+    sleep(3)
+    print("\n")
+    print("\n")
+    print("You have made the wrong choice.")
+    sleep(2)
+    print("\n")
+    print("You are simply stupid.")
+    sleep(1)
+    sprint("Really switched sides faster than michael jackson huh?")
+    sleep(1)
+    sprint("you flithy snake, someone who backstabs others every chance they get should be removed anyways.")
+    sprint('"good riddance" indeed')
+    sleep(3)
+    print("\n")
+    print("\n")
+    print("\n")
+    sprint("Intelligence is chasing you... however you have always been faster")
+    sleep(2)
+    sprint("better luck next time,... traitor..")
+    exit()
 
 
-
-    if WouldYouLikeToFollowMeInstead == '1':
-        sprint('"Good" she says')
+elif WouldYouLikeToFollowMeInstead == '2':
 
 
     WillYouTakeOnThisMission = input('"Will you formally take on this mission Player? Yes or No "\n') #decides pathway 1 or 3
