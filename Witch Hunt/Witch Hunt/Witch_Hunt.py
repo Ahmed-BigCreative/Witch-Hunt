@@ -12,6 +12,8 @@
 from ctypes.wintypes import ULONG
 from time import sleep
 
+
+skip = False
 import sys,time
 from tkinter import N
 
@@ -198,8 +200,8 @@ elif IsHerbiaReallyThatBad == '2': # pathway 1
         sprint("'That sounds kind of petty', you think to yourself")
         sleep(1)
         sprint('"That you for informing me" you reply')
-if IsHerbiaReallyThatBad == '3':
-        break ()
+    
+    
     elif IsHerbiaReallyThatBadContinuation == '2': # u die
         sleep(1)
         sprint('"How arrogant"')
@@ -230,10 +232,12 @@ if IsHerbiaReallyThatBad == '3':
         sleep(2)
         sprint("better luck next time,... rude ahh")
         exit()
-sleep(3)
+elif IsHerbiaReallyThatBad == '3':
+    sprint('"Good" she says')
+    sleep(1)
 print("\n")
 print("\n")
-sprint("The conversation ceases, howevery ou start to thing")
+sprint("The conversation ceases, however you start to think")
 sleep(1)
 sprint("As you do, you feel a certain aura enveloping your surroudings")
 sleep(1)
@@ -247,117 +251,127 @@ sleep(1)
 print("\n")
 sprint('"We are seperated for a while. Player, she is tricking you, do not fall for her manipulative poisonous words coated in honey.."the unknown voice says')
 WouldYouLikeToFollowMeInstead = input ("""
+"Would you like to follow me instead"
 1 for "Yes"
-2 for "Who are you"
+2 for "Who are you... and why do you wany "
 3 for "No"
 """)
+if WouldYouLikeToFollowMeInstead == '1':
+    sprint('"ugh" she says')
+    sprint("...\n")
+    sprint("so you're one of those huh... disgusting")
+    sprint('"what did i do?" you respond confused\n')
+    sleep(1)
+    sprint('"Your kind')
 
-if WouldYouLikeToFollowMeInstead = '1':
-    sprint('"Good" she says')
 
 
-WillYouTakeOnThisMission = input('"Will you formally take on this mission Player? Yes or No "\n') #decides pathway 1 or 3
-if WillYouTakeOnThisMission == 'Yes': #you will go on pathway 1
-    sprint('"I must thank you hero, there will certainly be a multitiude of rewards and benefits for you after you complete your mission,... maybe even me.."')
-elif WillYouTakeOnThisMission == 'No': #test your luck in pathway 3
-    sleep(1)
-    sprint('"Then may death grasp your soul"')
-    sleep(1)
-    sprint('"Foolish Mortal....."ZWAP')
-    print("fu23*&£YUR{@}{@y2")
-    sleep(1)
-    print(R"""
-    ⣴⠀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣷⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⢾⣷⣿⣿⣿⣿⣿⠿⠟⠛⠉⠉⠉⠉⠉⠙⠳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠘⢿⡏⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀
-⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡴⠒⠒⠒⠒⢢⣤⠀⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀
-⠀⠀⢿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠀⠀⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀
-⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣷⣿⡆⠀⠀
-⠀⠀⠀⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
-⠀⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣄⣠⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
-⠀⠀⠀⠀⣿⣶⡄⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
-⠀⠀⠀⠀⠻⣿⣿⣄⠀⠀⠀⠀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
-⠀⠀⠀⠀⠀⢹⡌⢻⣿⣦⣄⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡼⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
-⠀⠀⠀⠀⠀⠘⣧⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⢹⣿⡇⢿⣿⣿⣿⣿⣿⣿⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢹⣄⣀⣀⠈⠛⢻⣿⣿⣿⣿⡏⠀⠀⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⡇⠀⠀
-⠀⠀⠀⠀⠀⠀⠈⣯⠉⠀⠀⠀⢸⣿⣿⣿⣿⣆⠀⠀⠀⢿⣿⡇⠸⣿⣿⣿⣿⣿⣿⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⠀⠀⢸⣿⣿⣿⣿⣿⣧⠀⠀⠘⣿⡇⠀⢹⣿⣿⣿⣿⣿⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⡇⠀⠀⢹⣧⡀⠀⣿⣿⣿⣿⡿⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⠀⢸⣿⣿⣿⣿⣿⣿⣧⠀⠀⣿⣿⣷⣄⢹⣿⣿⣿⡇⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⡄⠀⢿⣿⢿⡻⢝⣿⣿⣿⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⢸⣿⣿⣿⣿⣿⣿⣿⣷⠀⠐⠈⠁⠁⠀⣿⣿⣿⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⢸⣿⡟⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠘⣿⠃⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠏⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠟⠛⠛⠿⠿⠿⠿⠿⣿⣿⣿⣿⠿⠿⠿⢿⠿⠟⠛⠛⠃
-    """)
-    sleep(2)
-    print("beep") # now in underworld 
-    sprint("You have made the wrong choice")
-    sprint("You have died..")
-    sprint("You start to see, and witness a pool of darkness below you")
-    sleep(1)
-    sprint("Slowly, your senses return")
-    sprint("And with it excruitiating pain")
-    sleep(2)
-    sprint("In the midst of agony, you feel")
-    sprint("However you do not feel")
-    sleep(1)
-    sprint("You are a living being no longer, In the realm of the dead all beings are equal")
-    sleep(1)
-    sprint("Before the king of the underworld and his messenger, the reaper, suffering is beauty")
-    sleep(1)
-    HowDoYouFeel = input("How do you feel\n") # useless input
-    sleep(2)
-    sprint("It does not matter, your feelings are not important")
-    DoYouHarbourRegretOrVengeanceInYourHeart = input("Do you harbour regret or vengeance in your heart. Yes or No\n") 
-    if DoYouHarbourRegretOrVengeanceInYourHeart == 'Yes': # MAIN SCANERIO 3 you said you have regrets when underworld ruler asked (will lead you to pathway 3)
+    if WouldYouLikeToFollowMeInstead == '1':
+        sprint('"Good" she says')
+
+
+    WillYouTakeOnThisMission = input('"Will you formally take on this mission Player? Yes or No "\n') #decides pathway 1 or 3
+    if WillYouTakeOnThisMission == 'Yes': #you will go on pathway 1
+        sprint('"I must thank you hero, there will certainly be a multitiude of rewards and benefits for you after you complete your mission,... maybe even me.."')
+    elif WillYouTakeOnThisMission == 'No': #test your luck in pathway 3
+        sleep(1)
+        sprint('"Then may death grasp your soul"')
+        sleep(1)
+        sprint('"Foolish Mortal....."ZWAP')
+        print("fu23*&£YUR{@}{@y2")
+        sleep(1)
+        print(R"""
+        ⣴⠀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣷⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⢾⣷⣿⣿⣿⣿⣿⠿⠟⠛⠉⠉⠉⠉⠉⠙⠳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠘⢿⡏⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡴⠒⠒⠒⠒⢢⣤⠀⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀
+    ⠀⠀⢿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠉⠀⠀⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀
+    ⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣷⣿⡆⠀⠀
+    ⠀⠀⠀⢻⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+    ⠀⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣤⣄⣠⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
+    ⠀⠀⠀⠀⣿⣶⡄⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
+    ⠀⠀⠀⠀⠻⣿⣿⣄⠀⠀⠀⠀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
+    ⠀⠀⠀⠀⠀⢹⡌⢻⣿⣦⣄⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡼⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠘⣧⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⢹⣿⡇⢿⣿⣿⣿⣿⣿⣿⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⢹⣄⣀⣀⠈⠛⢻⣿⣿⣿⣿⡏⠀⠀⠀⣿⣿⠀⣿⣿⣿⣿⣿⣿⡇⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠈⣯⠉⠀⠀⠀⢸⣿⣿⣿⣿⣆⠀⠀⠀⢿⣿⡇⠸⣿⣿⣿⣿⣿⣿⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⠀⠀⢸⣿⣿⣿⣿⣿⣧⠀⠀⠘⣿⡇⠀⢹⣿⣿⣿⣿⣿⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⡇⠀⠀⢹⣧⡀⠀⣿⣿⣿⣿⡿⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⠀⢸⣿⣿⣿⣿⣿⣿⣧⠀⠀⣿⣿⣷⣄⢹⣿⣿⣿⡇⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⡄⠀⢿⣿⢿⡻⢝⣿⣿⣿⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⡆⠀⢸⣿⣿⣿⣿⣿⣿⣿⣷⠀⠐⠈⠁⠁⠀⣿⣿⣿⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⢸⣿⡟⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠘⣿⠃⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠏⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠿⠟⠛⠛⠿⠿⠿⠿⠿⣿⣿⣿⣿⠿⠿⠿⢿⠿⠟⠛⠛⠃
+        """)
         sleep(2)
-        sprint("Through the darkness of the abyss, an even darker aura emerges")
+        print("beep") # now in underworld 
+        sprint("You have made the wrong choice")
+        sprint("You have died..")
+        sprint("You start to see, and witness a pool of darkness below you")
         sleep(1)
-        sprint("Torrents of deathly mana rush through the space")
-        sprint("A tear, rips through reality and finally,... a voice speaks to you")
-        sleep(1)
-        sprint('"We have heard your pleas,..Player"',PlayerName)
-        sprint('"Your heart has the place for desire, it glows with hatred for the being who caused unjust"')
-        sleep(1)
-        print("\n")
-        print("\n")
-        print("Pathway 'Three' unlocked")
-    elif DoYouHarbourRegretOrVengeanceInYourHeart == 'No': #you said you have no regrets when underworld ruler asked (will kill you)
+        sprint("Slowly, your senses return")
+        sprint("And with it excruitiating pain")
         sleep(2)
-        print("You have made the wrong choice.")
+        sprint("In the midst of agony, you feel")
+        sprint("However you do not feel")
         sleep(1)
-        sprint('"Return.."')
-        print("\n")
-        sprint("You feel yourself losing something")
+        sprint("You are a living being no longer, In the realm of the dead all beings are equal")
         sleep(1)
-        sprint("Something deep inside of you,... Something..profound")
+        sprint("Before the king of the underworld and his messenger, the reaper, suffering is beauty")
         sleep(1)
-        sprint("A trail of essense exits your consciousness")
-        sleep(1)
-        sprint("In your final moments of sentience, you come to a realisation")
-        sleep(1)
-        sprint('"Ah, I wish I had made the right decisions"')
+        HowDoYouFeel = input("How do you feel\n") # useless input
         sleep(2)
-        print("\n")
-        print("You are a failure.")
-        sprint("You have been given a chance after the next, however your ignorance continues to shine")
-        sleep(3)
-        print("\n")
-        print("\n")
-        print("\n")
-        sprint("Intelligence is chasing you... however you have always been faster")
-        sleep(2)
-        sprint("better luck next time, if there is one...")
-        exit()
-        #dead from pathway 3 after saying u have no regrets
+        sprint("It does not matter, your feelings are not important")
+        DoYouHarbourRegretOrVengeanceInYourHeart = input("Do you harbour regret or vengeance in your heart. Yes or No\n") 
+        if DoYouHarbourRegretOrVengeanceInYourHeart == 'Yes': # MAIN SCANERIO 3 you said you have regrets when underworld ruler asked (will lead you to pathway 3)
+            sleep(2)
+            sprint("Through the darkness of the abyss, an even darker aura emerges")
+            sleep(1)
+            sprint("Torrents of deathly mana rush through the space")
+            sprint("A tear, rips through reality and finally,... a voice speaks to you")
+            sleep(1)
+            sprint('"We have heard your pleas,..Player"',PlayerName)
+            sprint('"Your heart has the place for desire, it glows with hatred for the being who caused unjust"')
+            sleep(1)
+            print("\n")
+            print("\n")
+            print("Pathway 'Three' unlocked")
+        elif DoYouHarbourRegretOrVengeanceInYourHeart == 'No': #you said you have no regrets when underworld ruler asked (will kill you)
+            sleep(2)
+            print("You have made the wrong choice.")
+            sleep(1)
+            sprint('"Return.."')
+            print("\n")
+            sprint("You feel yourself losing something")
+            sleep(1)
+            sprint("Something deep inside of you,... Something..profound")
+            sleep(1)
+            sprint("A trail of essense exits your consciousness")
+            sleep(1)
+            sprint("In your final moments of sentience, you come to a realisation")
+            sleep(1)
+            sprint('"Ah, I wish I had made the right decisions"')
+            sleep(2)
+            print("\n")
+            print("You are a failure.")
+            sprint("You have been given a chance after the next, however your ignorance continues to shine")
+            sleep(3)
+            print("\n")
+            print("\n")
+            print("\n")
+            sprint("Intelligence is chasing you... however you have always been faster")
+            sleep(2)
+            sprint("better luck next time, if there is one...")
+            exit()
+            #dead from pathway 3 after saying u have no regrets
 
     
 
