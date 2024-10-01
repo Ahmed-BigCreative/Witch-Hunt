@@ -21,7 +21,7 @@ def sprint(str):
    for c in str + '\n':
      sys.stdout.write(c)
      sys.stdout.flush()
-     time.sleep(4./90)
+     time.sleep(1./90)
 
 sprint("You awaken...")
 sleep(1)
@@ -233,8 +233,11 @@ elif IsHerbiaReallyThatBad == '2': # pathway 1
         sprint("better luck next time,... rude ahh")
         exit()
 elif IsHerbiaReallyThatBad == '3':
-    sprint('"Good" she says')
+    sprint('"good"')
     sleep(1)
+
+
+
 print("\n")
 print("\n")
 sprint("The conversation ceases, however you start to think")
@@ -252,11 +255,11 @@ print("\n")
 sprint('"We are seperated for a while. Player, she is tricking you, do not fall for her manipulative poisonous words coated in honey.."the unknown voice says')
 WouldYouLikeToFollowMeInstead = input ("""
 "Would you like to follow me instead"
-1 for "Yes"
+1 for "yes"
 2 for "Who are you... and why do you want "
-3 for "No"
+3 for "no"
 """)
-if WouldYouLikeToFollowMeInstead == '1':
+if WouldYouLikeToFollowMeInstead == '1'or "yes".lower() :
     sprint('"ugh" she says')
     sprint("...\n")
     sprint("so you're one of those huh... disgusting")
@@ -285,9 +288,19 @@ if WouldYouLikeToFollowMeInstead == '1':
     sleep(2)
     sprint("better luck next time,... traitor..")
     exit()
-
-
 elif WouldYouLikeToFollowMeInstead == '2':
+    sprint('"I am the great witch Herbia, ')
+    sprint('"')
+
+elif WouldYouLikeToFollowMeInstead == '3':
+    sprint('"You refuse???...I guess i cant force you" she says')
+    sleep(1)
+    sprint('"Very well then"')
+    sprint(R'"I shall let you go... to HELL 😈"')
+    sleep(1)
+    sprint('"No variables must be left.. so you shall not be allowed to exist"')
+    
+
 
 
     WillYouTakeOnThisMission = input('"Will you formally take on this mission Player? Yes or No "\n') #decides pathway 1 or 3
