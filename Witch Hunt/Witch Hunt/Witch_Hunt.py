@@ -1,4 +1,9 @@
-﻿print(R""" 
+﻿from ctypes.wintypes import ULONG
+from time import sleep
+from pathways import *
+import random
+
+print(R""" 
          __________________ _______                               _       _________
 |\     /|\__   __/\__   __/(  ____ \|\     /|  |\     /||\     /|( (    /|\__   __/
 | )   ( |   ) (      ) (   | (    \/| )   ( |  | )   ( || )   ( ||  \  ( |   ) (   
@@ -9,10 +14,6 @@
 (_______)\_______/   )_(   (_______/|/     \|  |/     \|(_______)|/    )_)   )_(   
 """)
 
-from ctypes.wintypes import ULONG
-from time import sleep
-
-
 skip = False
 import sys,time
 from tkinter import N
@@ -21,7 +22,7 @@ def sprint(str):
    for c in str + '\n':
      sys.stdout.write(c)
      sys.stdout.flush()
-     time.sleep(1./90)
+     time.sleep(3./90)
 
 sprint("You awaken...")
 sleep(1)
@@ -182,7 +183,7 @@ if IsHerbiaReallyThatBad == '1': # ur dead (become stuffed doll)
     sleep(2)
     sprint("better luck next time,.. dumbass")
     exit()
-elif IsHerbiaReallyThatBad == '2': # pathway 1
+elif IsHerbiaReallyThatBad == '2': 
     sprint("The angel glares at you")
     IsHerbiaReallyThatBadContinuation = input ("""
     1 for "Sorry if i offended you, I am just curious Miss"
@@ -200,8 +201,6 @@ elif IsHerbiaReallyThatBad == '2': # pathway 1
         sprint("'That sounds kind of petty', you think to yourself")
         sleep(1)
         sprint('"That you for informing me" you reply')
-    
-    
     elif IsHerbiaReallyThatBadContinuation == '2': # u die
         sleep(1)
         sprint('"How arrogant"')
@@ -259,7 +258,7 @@ WouldYouLikeToFollowMeInstead = input ("""
 2 for "Who are you... and why do you want "
 3 for "no"
 """)
-if WouldYouLikeToFollowMeInstead == '1'or "yes".lower() :
+if WouldYouLikeToFollowMeInstead == '1': #kills u
     sprint('"ugh" she says')
     sprint("...\n")
     sprint("so you're one of those huh... disgusting")
@@ -288,24 +287,107 @@ if WouldYouLikeToFollowMeInstead == '1'or "yes".lower() :
     sleep(2)
     sprint("better luck next time,... traitor..")
     exit()
-elif WouldYouLikeToFollowMeInstead == '2':
+elif WouldYouLikeToFollowMeInstead == '2': 
     sprint('"I am the great witch Herbia, ')
-    sprint('"')
+    sprint('"Their story about me is fabricated."')
+    sprint('"They are just mad that a mortal such as myself has managed to ascend to a semi heavenly state"')
+    sleep(1)
+    print("\n")
+    sprint('"Their grip on power is detestable, the so called good side strikes down anyone with the potential to reach their rank"')
+    sprint('"And someday.. they shall do the same to you"')
+    sleep(1)
+    print("\n")
+    sprint("Therefore, will you join the side that will bring the treacherous two faced villains that sit atop their shiny throne")
+    WillYouFollowTheWitch = input("""
+    Will you follow the witch?
+    1 for "Alright,..I will believe in your words and help you,..lets see what the future has in store for us..."
+    2 for "No, I do not believe you"
+    """)
+    if WillYouFollowTheWitch == '1': #pathway 2
+        sprint('"good boy, I shall lead the way, so let us leave this place quickly"')
+        sleep(2)
+        print("A space time rift opens up")
+        sleep(1)
+        print("The residue ofd ancient mana permeates through the air")
+        sleep(1)
+        print("Dark dreary aura fills you as you walk through")
+        randomnumber = random.randrange(1,3)
+        randomuser = int(input("Enter a number from 1 to 3: "))
+        if randomnumber == randomuser:
+            print("You survived the journey")
+            sleep(2)
+            sprint("Welcome to the land of revolution. The Demon Kingdom...")
+            path_2()
+           
+        else:
+            sprint("to be honest.... you didnt even make the wrong choice")
+            sprint("You just had a skill issue")
+            print("\n")
+            sprint("You did not survive..your soul could not handle the burden of travelling through space and time")
+            sleep(1)
+            print("\n")
+            sprint("Cant even hate that much, but get better")
+            sprint("improve your luck, strengthen your soul")
+            sleep(1)
+            print("\n")
+            sprint("Intelligence has always chased you... you know what? nevermind i feel bad..")
+            sprint("better luck next time..")
+            exit()
 
-elif WouldYouLikeToFollowMeInstead == '3':
+
+         
+
+
+                                     
+    elif WillYouFollowTheWitch == '2': # u die
+        sprint("It seems that even after questioning me, and having me tell a whole tale , you shall still be rude and reject my invitations.")
+        sprint("You do not deserve this life you live, and variables must be removed anyways")
+        sprint("Die, pest")
+        sleep(3)
+        print("\n")
+        print("\n")
+        print("You have made the wrong choice.")
+        sleep(2)
+        print("\n")
+        print("You really are stupid huh?")
+        sleep(1)
+        sprint("You get a heaven level being to explain who they are, their stance and backstory. And you sit like a fool listening to it all, you just reject them?")
+        sleep(1)
+        sprint("Indecisiveness is a weakness, you would not have mad it far regardless")
+        sprint('with your removal, the world becomes a better place')
+        sleep(3)
+        print("\n")
+        print("\n")
+        print("\n")
+        sprint("Intelligence is chasing you... however you have always been faster")
+        sleep(2)
+        sprint("better luck next time,...(i lied)")
+        exit()
+elif WouldYouLikeToFollowMeInstead == '3': #pathway 1 or 3
     sprint('"You refuse???...I guess i cant force you" she says')
     sleep(1)
     sprint('"Very well then"')
-    sprint(R'"I shall let you go... to HELL 😈"')
+    sprint(R'"I shall let you go then..... TO HELL 😈"')
     sleep(1)
     sprint('"No variables must be left.. so you shall not be allowed to exist"')
-    
+    sleep(1)
+    print("\n")
+    print("Herbia, the ancient witch powers up")
+    print("please prepare to attempt to defeat her")
+    sprint("...")
+    sleep(2)
+    sprint("Just as you start to regret your decisions, fate saves you")
+    sprint("the angel who realised the situation calmly steps in and saves your day")
+    sprint('"You are lucky, i noticed in time"she says')
+    sprint('"With this you are indepted to me" she continues')
 
 
 
     WillYouTakeOnThisMission = input('"Will you formally take on this mission Player? Yes or No "\n') #decides pathway 1 or 3
     if WillYouTakeOnThisMission == 'Yes': #you will go on pathway 1
         sprint('"I must thank you hero, there will certainly be a multitiude of rewards and benefits for you after you complete your mission,... maybe even me.."')
+        path_1()
+
     elif WillYouTakeOnThisMission == 'No': #test your luck in pathway 3
         sleep(1)
         sprint('"Then may death grasp your soul"')
@@ -376,7 +458,8 @@ elif WouldYouLikeToFollowMeInstead == '3':
             sleep(1)
             print("\n")
             print("\n")
-            print("Pathway 'Three' unlocked")
+            print("Pathway Three (secret) unlocked")
+            path_3()
         elif DoYouHarbourRegretOrVengeanceInYourHeart == 'No': #you said you have no regrets when underworld ruler asked (will kill you)
             sleep(2)
             print("You have made the wrong choice.")
