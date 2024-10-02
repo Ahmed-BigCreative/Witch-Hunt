@@ -22,7 +22,7 @@ def sprint(str):
    for c in str + '\n':
      sys.stdout.write(c)
      sys.stdout.flush()
-     time.sleep(3./90)
+     time.sleep(0./90)
 
 sprint("You awaken...")
 sleep(1)
@@ -311,8 +311,8 @@ elif WouldYouLikeToFollowMeInstead == '2':
         print("The residue ofd ancient mana permeates through the air")
         sleep(1)
         print("Dark dreary aura fills you as you walk through")
-        randomnumber = random.randrange(1,3)
-        randomuser = int(input("Enter a number from 1 to 3: "))
+        randomnumber = random.randint(1,4)
+        randomuser = int(input("Enter a number from 1 to 4: "))
         if randomnumber == randomuser:
             print("You survived the journey")
             sleep(2)
@@ -324,6 +324,7 @@ elif WouldYouLikeToFollowMeInstead == '2':
             sprint("You just had a skill issue")
             print("\n")
             sprint("You did not survive..your soul could not handle the burden of travelling through space and time")
+            print("the correct answer was",randomnumber)
             sleep(1)
             print("\n")
             sprint("Cant even hate that much, but get better")

@@ -1,6 +1,5 @@
 from ctypes.wintypes import ULONG
 from time import sleep
-from pathways import *
 import random
 skip = False
 import sys,time
