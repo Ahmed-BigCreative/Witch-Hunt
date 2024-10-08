@@ -17,7 +17,7 @@ def sprint(str):
 def path_1():
     sleep(2)
     print("Welcome to pathway one, you have joined the war on the side of the angels")
-
+    
 
 def path_2():
     sleep(2)
