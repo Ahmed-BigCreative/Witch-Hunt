@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Learn.py" />
     <Compile Include="pathways.py" />
     <Compile Include="Witch_Hunt.py" />
   </ItemGroup>

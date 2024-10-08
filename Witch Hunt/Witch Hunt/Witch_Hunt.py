@@ -1,4 +1,4 @@
-﻿from ctypes.wintypes import ULONG
+﻿ from ctypes.wintypes import ULONG
 from time import sleep
 from pathways import *
 import random
@@ -23,6 +23,8 @@ def sprint(str):
      sys.stdout.write(c)
      sys.stdout.flush()
      time.sleep(3./90)
+
+#beginning
 
 sprint("You awaken...")
 sleep(1)
@@ -108,7 +110,6 @@ Archer
 Mage
 Alchemist
 Rogue
-Tamer
 Dancer
 Dragoon
 """)
@@ -116,7 +117,7 @@ print("\n")
 sprint('"These are all the base starting classes, after your class evolution you would be able to choose to evolve into a better version of your class for example:"')
 sprint('"A Warrior would be able to become a berserker. Other than that, Summoner, Lich, Ranger, Assassain, Necromancer, Jester, Enchanter, Dark Mage and Wizard are all just some of your Class opportunities"')
 print("\n")
-PlayerChosenClass = input('"Which path will you choose"\n') # useless inout since shrine will fail anyways
+PlayerChosenClass = input('"Which path will you choose"\n') #the input is to make the game more interactive, but you will recieve hidden tamer class
 sleep(1)
 print('"',PlayerChosenClass,'...? Very well then, I shall do as you wish"')
 sprint('"Let us get on with the ritual"')
@@ -140,7 +141,7 @@ What would you like to responde with
 1 for "Do i really have to??...I mean, I dont know what she has done and this isnt even my own world"
 2 for "What has she done to recieve that treatment"
 3 for "I understand"
-                             \n""") #makes your choice of pathway 1 or 2
+                             \n""") 
 if IsHerbiaReallyThatBad == '1': # ur dead (become stuffed doll)
     sprint('"You dare disrespect the heavens wishes like this?"')
     sleep(1)
@@ -183,7 +184,7 @@ if IsHerbiaReallyThatBad == '1': # ur dead (become stuffed doll)
     sleep(2)
     sprint("better luck next time,.. dumbass")
     exit()
-elif IsHerbiaReallyThatBad == '2': 
+elif IsHerbiaReallyThatBad == '2':  # 2 choices, 1= u continue, 2 = u die
     sprint("The angel glares at you")
     IsHerbiaReallyThatBadContinuation = input ("""
     1 for "Sorry if i offended you, I am just curious Miss"
@@ -363,7 +364,7 @@ elif WouldYouLikeToFollowMeInstead == '2':
         sleep(2)
         sprint("better luck next time,...(i lied)")
         exit()
-elif WouldYouLikeToFollowMeInstead == '3': #pathway 1 or 3
+elif WouldYouLikeToFollowMeInstead == '3': #no more pathway 2, either 1 or 3
     sprint('"You refuse???...I guess i cant force you" she says')
     sleep(1)
     sprint('"Very well then"')
