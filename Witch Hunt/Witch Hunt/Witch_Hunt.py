@@ -235,7 +235,7 @@ elif IsHerbiaReallyThatBad == '2':  # 2 choices, 1= u continue, 2 = u die
 elif IsHerbiaReallyThatBad == '3':
     sprint('"good"')
     sleep(1)
-
+    
 
 
 print("\n")
@@ -490,5 +490,5 @@ elif WouldYouLikeToFollowMeInstead == '3': #no more pathway 2, either 1 or 3
             exit()
             #dead from pathway 3 after saying u have no regrets
 
-    
+    #d
 
